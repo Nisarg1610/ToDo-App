@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+body {
+  background-image: url("./images/background.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+@keyframes gradient {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.App {
+  text-align: center;
+}
+
+h1 {
+  color: #623a86; /* Dark purple for headings */
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
+}
+
+.TodoWrapper {
+  background: rgba(255, 255, 255, 0.2); /* Adjust the alpha value for the desired blur effect */
+  backdrop-filter: blur(10px); /* Adjust the blur value as needed */
+  margin-top: 5rem;
+  padding: 2rem;
+  border-radius: 15px; /* Increase border-radius for a smoother glass effect */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+}
+
+/* Adjusted color for form input border */
+.todo-input {
+  outline: none;
+  background: none;
+  border: 1px solid #8a57a6; /* Adjusted to complement light purple */
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: 300px;
+  color: #000000;
+}
+
+.todo-input::placeholder {
+  color: #8a57a68a; /* Adjusted to complement light purple with alpha value */
+}
+
+.todo-btn {
+  background: #8a57a6; /* Adjusted to complement light purple */
+  color: #fff;
+  border: none;
+  padding: 0.55rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.todo-btn:hover {
+  background: #54337d; /* Darker purple on hover */
+}
+
+/* Adjusted colors for task items */
+.Todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #7b4fd0; /* Adjusted to complement light purple */
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  transition: background 0.3s ease;
+}
+
+.Todo:hover {
+  background: #54337d; /* Darker purple on hover */
+}
+
+.fa-trash {
+  margin-left: 0.75rem;
+}
+
+.incompleted {
+  color: #f6f5f5; /* Adjusted to a complementary color */
+  cursor: pointer;
+}
+
+.completed {
+  color: #d1d1d1; /* Adjusted to complement light purple */
+  text-decoration: line-through;
+  cursor: pointer;
+}
+
+.edit-icon,
+.delete-icon {
+  cursor: pointer;
+}
